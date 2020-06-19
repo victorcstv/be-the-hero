@@ -1,0 +1,11 @@
+const { intersect } = require("../../src/database/connection");
+const generateUniqueID = require('../../src/utils/generateUniqueID');
+
+
+describe('Generate Unique ID', () => {
+    it('should generate an unique ID', () => {
+        const id = generateUniqueID();
+
+        expect(id).toHaveLength(8);
+    })
+});
